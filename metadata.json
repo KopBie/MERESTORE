@@ -1,0 +1,8 @@
+{
+  "name": "MERE FASHION - E-Commerce & Marketing Blueprint",
+  "description": "Rancangan sistem e-commerce terintegrasi POAC, database SQL/ERD, API Laravel, warehouse fulfillment, dan materi marketing digital untuk brand MERE FASHION.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
