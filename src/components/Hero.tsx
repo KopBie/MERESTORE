@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, ShieldCheck, Sparkles, Truck, RefreshCw } from 'lucide-react';
+import { getAssetUrl } from '../utils/commerce';
 
 interface HeroProps {
   onExplore: () => void;
@@ -62,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenFlowchart }) => {
           {/* Right Column: Hero Lookbook Visual */}
           <div className="lg:col-span-7 relative min-h-[380px] lg:min-h-[520px] rounded-none overflow-hidden bg-neutral-200">
             <img
-              src="/src/assets/images/hero_mere_fashion_1793622512464.jpg"
+              src={getAssetUrl('/src/assets/images/hero_mere_fashion_1793622512464.jpg')}
               alt="MERE FASHION Campaign Lookbook 2026"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center"

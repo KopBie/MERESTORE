@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Trash2, ArrowRight, Tag, ShoppingBag } from 'lucide-react';
-import { CartItem, formatIDR, calculateOrderSummary } from '../utils/commerce';
+import { CartItem, formatIDR, calculateOrderSummary, getAssetUrl } from '../utils/commerce';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -81,7 +81,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 {/* Thumbnail */}
                 <div className="w-20 h-24 bg-neutral-200 shrink-0 overflow-hidden">
                   <img
-                    src={product.image}
+                    src={getAssetUrl(product.image)}
                     alt={product.name}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Search, SlidersHorizontal, Plus } from 'lucide-react';
-import { Product, formatIDR } from '../utils/commerce';
+import { Product, formatIDR, getAssetUrl } from '../utils/commerce';
 
 interface ProductCatalogProps {
   products: Product[];
@@ -133,7 +133,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                 {/* Product Image Slot */}
                 <div className="relative aspect-[4/3] bg-neutral-100 overflow-hidden">
                   <img
-                    src={product.image}
+                    src={getAssetUrl(product.image)}
                     alt={product.name}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"

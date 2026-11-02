@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Scissors, Leaf, ShieldCheck } from 'lucide-react';
+import { getAssetUrl } from '../utils/commerce';
 
 export const AboutUsSection: React.FC = () => {
   return (
@@ -55,7 +56,7 @@ export const AboutUsSection: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/3] bg-neutral-200 overflow-hidden shadow-lg border border-neutral-300">
               <img
-                src="/src/assets/images/product_mere_blazer_1793622513253.jpg"
+                src={getAssetUrl('/src/assets/images/product_mere_blazer_1793622513253.jpg')}
                 alt="MERE Fashion Atelier Craftsmanship"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center"

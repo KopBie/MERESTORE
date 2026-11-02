@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Check, ShieldCheck, Ruler, ArrowRight } from 'lucide-react';
-import { Product, ProductVariant, formatIDR } from '../utils/commerce';
+import { Product, ProductVariant, formatIDR, getAssetUrl } from '../utils/commerce';
 
 interface ProductModalProps {
   product: Product | null;
@@ -63,7 +63,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
         {/* Left: Product Image */}
         <div className="w-full md:w-1/2 bg-neutral-100 relative min-h-[280px] md:min-h-full">
           <img
-            src={product.image}
+            src={getAssetUrl(product.image)}
             alt={product.name}
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center"
